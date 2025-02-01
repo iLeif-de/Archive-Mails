@@ -1,0 +1,5 @@
+imap_server: imap.example.com
+username: user
+password: password
+output_folder: /path/to/Folder
+
