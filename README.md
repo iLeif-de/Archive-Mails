@@ -2,7 +2,11 @@
 
 ## Disclaimer
 
-THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+🚀 **Use at Your Own Risk!** 🚀  
+
+This script is provided **"as is"** with **no warranty, no guarantee, and absolutely no responsibility** on my part if it crashes, burns, wipes your email archive, steals your lunch, or causes your cat to start plotting against you.  
+By using this script, you accept that **anything that happens is 100% on you**. If it works—awesome! 🎉 If it doesn't—well, you’ve been warned. 🔥  
+I will not be held liable for **data loss, system malfunctions, email monsters, existential crises, or any other chaos that may ensue**. Use at your own discretion. Modify it, break it, improve it, but **don’t blame me if something goes sideways.**  
 
 ## Overview
 Email Archiver is a Python script that connects to an IMAP email server, retrieves emails, and stores them locally in a structured format. The script decodes email content, handles attachments, and ensures safe filenames for storage.
