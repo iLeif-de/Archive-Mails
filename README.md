@@ -1,5 +1,3 @@
-I understand you’re seeking the complete content of the README.md file for your Email Archiver project. Here it is:
-
 # Email Archiver
 
 ## Overview
@@ -22,51 +20,56 @@ Email Archiver is a Python script that connects to an IMAP email server, retriev
 
 ## Installation
 
-1. **Clone the repository:**
+### 1. **Clone the repository:**
    ```sh
    git clone https://github.com/yourusername/email-archiver.git
    cd email-archiver
+   ```  
 
-	2.	Create a virtual environment:
-
+### 2.  Create a virtual environment:
+```sh
 python3 -m venv env
 source env/bin/activate  # On Windows use `env\Scripts\activate`
+```
 
-
-	3.	Install dependencies:
-
+### 3. Install dependencies:
+```sh
 pip install -r requirements.txt
+```
 
+### 4.  Configure the script:
+•   Edit the config.yaml file with your IMAP server details and archive directory.
 
-	4.	Configure the script:
-	•	Edit the config.yaml file with your IMAP server details and archive directory.
-
-Configuration
+## Configuration
 
 The script uses a config.yaml file to store configuration details:
 
+```yaml
 imap_server: "imap.example.com"
 username: "your-email@example.com"
 password: "your-email-password"
-output_folder: "./emails"
+output_folder: "/path/to/archive"
+```
 
-Usage
+## Usage
 
 Run the script using:
-
+```sh
 python Email_Archiver.py
+```
 
-Scheduling with launchd on macOS
+## Scheduling with launchd on macOS
 
 To run this script every hour on macOS, you can use launchd. Follow these steps:
-	1.	Create a plist file:
-	•	Open Terminal and create a new file in ~/Library/LaunchAgents/:
+### 1. Create a plist file:
+• Open Terminal and create a new file in ~/Library/LaunchAgents/:
 
+```sh
 nano ~/Library/LaunchAgents/com.email.archiver.plist
+```
+### 2.  Add the following content:
 
-
-	2.	Add the following content:
-
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -90,36 +93,37 @@ nano ~/Library/LaunchAgents/com.email.archiver.plist
         <string>/tmp/email_archiver.err</string>
     </dict>
 </plist>
+```
 
 Note:
-	•	Replace /path/to/your/virtualenv/bin/python with the absolute path to the Python interpreter in your virtual environment. For example, /Users/yourusername/email-archiver/env/bin/python.
-	•	Replace /path/to/email-archiver/Email_Archiver.py with the absolute path to the Email_Archiver.py script.
-	•	Ensure all paths are absolute to prevent issues with launchd.
+    •   Replace /path/to/your/virtualenv/bin/python with the absolute path to the Python interpreter in your virtual environment. For example, /Users/yourusername/email-archiver/env/bin/python.
+    •   Replace /path/to/email-archiver/Email_Archiver.py with the absolute path to the Email_Archiver.py script.
+    •   Ensure all paths are absolute to prevent issues with launchd.
 
-	3.	Load the job:
-
+### 3.  Load the job:
+```sh
 launchctl load ~/Library/LaunchAgents/com.email.archiver.plist
+```
 
 To unload the job:
-
+```sh
 launchctl unload ~/Library/LaunchAgents/com.email.archiver.plist
-
-
+```
 
 Important Considerations:
-	•	Absolute Paths: Ensure all paths in the .plist file are absolute. Relative paths can cause the job to fail.
-	•	Permissions: Ensure your script and the Python interpreter have the necessary execute permissions. You can set the appropriate permissions using the chmod command:
-
+    •   **Absolute Paths:** Ensure all paths in the .plist file are absolute. Relative paths can cause the job to fail.
+    •   **Permissions:** Ensure your script and the Python interpreter have the necessary execute permissions. You can set the appropriate permissions using the chmod command:
+```sh
 chmod +x /path/to/your/virtualenv/bin/python
 chmod +x /path/to/email-archiver/Email_Archiver.py
+```
 
-
-	•	Environment Variables: If your script relies on specific environment variables, you can define them within the .plist file using the <key>EnvironmentVariables</key> directive.
+•   **Environment Variables:** If your script relies on specific environment variables, you can define them within the .plist file using the <key>EnvironmentVariables</key> directive.
 
 By following these steps, your Python script will run automatically every hour using launchd on macOS.
 
-License
 
-This project is licensed under the MIT License.
 
-You can copy and paste this content into a file named `README.md` in your project directory. If you need further assistance or modifications, feel free to ask! 
+
+---
+Ordner: `=this.file.folder`
