@@ -1,5 +1,3 @@
-imaplib
-email
 PyYAML
 beautifulsoup4
 unidecode
